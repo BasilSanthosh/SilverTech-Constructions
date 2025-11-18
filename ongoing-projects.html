@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Ongoing Projects - SilverTech Constructions | Current Construction Projects</title>
+    <meta name="description" content="View our ongoing construction projects at SilverTech Constructions. See current projects in progress and their details.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        .ongoing-projects-page {
+            padding-top: 100px;
+            min-height: 100vh;
+            background: var(--bg);
+        }
+
+        .ongoing-projects-header {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 4rem 2rem;
+            text-align: center;
+        }
+
+        .ongoing-projects-back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .ongoing-projects-back-btn:hover {
+            color: var(--accent-purple);
+            transform: translateX(-5px);
+        }
+
+        .ongoing-projects-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 4rem 8rem;
+        }
+
+        .ongoing-project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .ongoing-project-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px var(--purple-glow);
+            transform: translateY(-5px);
+        }
+
+        .ongoing-project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .ongoing-project-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .ongoing-project-location {
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ongoing-project-status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffc107;
+            border: 1px solid rgba(255, 193, 7, 0.3);
+        }
+
+        .ongoing-project-client {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .ongoing-project-client strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .ongoing-project-description {
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .ongoing-project-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .ongoing-project-detail-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .ongoing-project-detail-label {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .ongoing-project-detail-value {
+            font-size: 1.125rem;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        @media (max-width: 767px) {
+            .ongoing-projects-header {
+                padding: 2rem 1.5rem 1rem;
+            }
+
+            .ongoing-projects-container {
+                padding: 2rem 1.5rem 4rem;
+            }
+
+            .ongoing-project-card {
+                padding: 1.5rem;
+            }
+
+            .ongoing-project-title {
+                font-size: 1.5rem;
+            }
+
+            .ongoing-project-header {
+                flex-direction: column;
+            }
+
+            .ongoing-project-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 479px) {
+            .ongoing-projects-header {
+                padding: 2rem 1rem 1rem;
+            }
+
+            .ongoing-projects-container {
+                padding: 2rem 1rem 3rem;
+            }
+
+            .ongoing-project-card {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-text">
+                        <span class="logo-initials">ST</span>
+                        <span class="logo-name">SilverTech Constructions</span>
+                    </div>
+                </div>
+                <a href="index.html" class="nav-cta">← Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ongoing Projects Page -->
+    <main class="ongoing-projects-page">
+        <div class="ongoing-projects-header">
+            <a href="index.html#completed-works" class="ongoing-projects-back-btn">
+                ← Back to Home
+            </a>
+            <span class="section-label">Ongoing Projects</span>
+            <h1 class="section-title">Current Construction Projects</h1>
+            <p class="section-description">
+                Explore our ongoing construction projects and see what we're building right now
+            </p>
+        </div>
+
+        <div class="ongoing-projects-container">
+            <!-- Ongoing Project 1 -->
+            <div class="ongoing-project-card">
+                <div class="ongoing-project-header">
+                    <div>
+                        <h2 class="ongoing-project-title">Indian Railways - Cable Work Sub Work</h2>
+                        <div class="ongoing-project-location">📍 Punalur</div>
+                    </div>
+                    <span class="ongoing-project-status">Ongoing</span>
+                </div>
+                <div class="ongoing-project-client">
+                    <strong>Client:</strong> Indian Railways
+                </div>
+                <p class="ongoing-project-description">
+                    Cable work sub work for Indian Railways at Punalur. This project involves specialized cable installation and infrastructure work for railway systems.
+                </p>
+                <div class="ongoing-project-details">
+                    <div class="ongoing-project-detail-item">
+                        <span class="ongoing-project-detail-label">Status</span>
+                        <span class="ongoing-project-detail-value">In Progress</span>
+                    </div>
+                    <div class="ongoing-project-detail-item">
+                        <span class="ongoing-project-detail-label">Location</span>
+                        <span class="ongoing-project-detail-value">Punalur</span>
+                    </div>
+                    <div class="ongoing-project-detail-item">
+                        <span class="ongoing-project-detail-label">Project Type</span>
+                        <span class="ongoing-project-detail-value">Cable Work - Sub Work</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ongoing Project 2 -->
+            <div class="ongoing-project-card">
+                <div class="ongoing-project-header">
+                    <div>
+                        <h2 class="ongoing-project-title">Sai Telimax - BSNL Work</h2>
+                        <div class="ongoing-project-location">📍 EKM (Ernakulam)</div>
+                    </div>
+                    <span class="ongoing-project-status">Ongoing</span>
+                </div>
+                <div class="ongoing-project-client">
+                    <strong>Client:</strong> BSNL Projects
+                </div>
+                <p class="ongoing-project-description">
+                    BSNL work for Sai Telimax at Ernakulam. This project involves telecommunications infrastructure work and network installation for BSNL.
+                </p>
+                <div class="ongoing-project-details">
+                    <div class="ongoing-project-detail-item">
+                        <span class="ongoing-project-detail-label">Status</span>
+                        <span class="ongoing-project-detail-value">In Progress</span>
+                    </div>
+                    <div class="ongoing-project-detail-item">
+                        <span class="ongoing-project-detail-label">Location</span>
+                        <span class="ongoing-project-detail-value">EKM (Ernakulam)</span>
+                    </div>
+                    <div class="ongoing-project-detail-item">
+                        <span class="ongoing-project-detail-label">Project Type</span>
+                        <span class="ongoing-project-detail-value">BSNL Work</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
